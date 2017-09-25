@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f26b1970-1b61-4db2-9a71-0eeede2feecf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/Models/VendingMachine.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Main/Test/VendingMachineTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VendingMachineKata/Main/Coin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/VendingMachineKata/Main/CoinTest.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main/Coin.java" afterPath="$PROJECT_DIR$/src/Main/Models/Coin.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Main/CoinTest.java" afterPath="$PROJECT_DIR$/src/Main/Test/CoinTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Test/VendingMachineTest.java" afterPath="$PROJECT_DIR$/src/Main/Test/VendingMachineTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/src/Main/Test/VendingMachineTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -395,13 +390,17 @@
       <option name="project" value="LOCAL" />
       <updated>1506368289995</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add test for VendingMachine coinAccepted">
+      <created>1506369319926</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1506369319926</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CoinTest - 2017.09.25 at 14h 23m 35s.xml">
-      <configuration name="CoinTest" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="CoinTest - 2017.09.25 at 14h 27m 31s.xml">
       <configuration name="CoinTest" configurationId="AndroidJUnit" />
     </history-entry>
@@ -429,9 +428,13 @@
     <history-entry file="VendingMachineTest_checkForValidCoin - 2017.09.25 at 15h 54m 37s.xml">
       <configuration name="VendingMachineTest.checkForValidCoin" configurationId="AndroidJUnit" />
     </history-entry>
+    <history-entry file="VendingMachineTest_checkForValidCoin - 2017.09.25 at 15h 56m 36s.xml">
+      <configuration name="VendingMachineTest.checkForValidCoin" configurationId="AndroidJUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -467,7 +470,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added test for penny diameter" />
     <MESSAGE value="Added test for all coins, refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for all coins, refactored" />
+    <MESSAGE value="add test for VendingMachine coinAccepted" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test for VendingMachine coinAccepted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -559,7 +563,7 @@
     <entry file="file://$PROJECT_DIR$/src/Main/Test/VendingMachineTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="15" column="52" lean-forward="true" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

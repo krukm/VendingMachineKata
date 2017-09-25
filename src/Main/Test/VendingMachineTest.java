@@ -12,7 +12,12 @@ class VendingMachineTest {
         VendingMachine vm = new VendingMachine();
         Coin penny = Coin.PENNY;
         Coin nickel = Coin.NICKEL;
+        Coin dime = Coin.DIME;
+        Coin quarter = Coin.QUARTER;
+
         assertEquals(false, vm.coinAccepted(penny));
         assertEquals(true, vm.coinAccepted(nickel));
+        assertEquals(true, vm.coinAccepted(dime));
+        assertEquals(true, vm.coinAccepted(quarter));
     }
 }
