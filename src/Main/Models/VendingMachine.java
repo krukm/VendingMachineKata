@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class VendingMachine {
 
-    ArrayList<Coin> coins = new ArrayList<>();
-    ArrayList<Coin> coinReturn = new ArrayList<>();
+    public ArrayList<Coin> coins = new ArrayList<>();
+    public ArrayList<Coin> coinReturn = new ArrayList<>();
 
     Coin penny = Coin.PENNY;
     Coin nickel = Coin.NICKEL;
