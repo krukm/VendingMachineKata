@@ -12,6 +12,16 @@ public class VendingMachine {
     Coin dime = Coin.DIME;
     Coin quarter = Coin.QUARTER;
 
+    String display = "INSERT COIN";
+
+    public double coinsAccepted(ArrayList<Coin> coins) {
+        double total = 0;
+        for(Coin change : coins) {
+            total = total + change.value;
+        }
+        return total;
+    }
+
     public boolean coinAccepted(Coin coin) {
         switch(coin) {
             case PENNY:

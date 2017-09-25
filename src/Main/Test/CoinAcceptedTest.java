@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class VendingMachineTest {
+class CoinAcceptedTest {
     @Test
     public void checkForValidCoin() {
         VendingMachine vm = new VendingMachine();
