@@ -10,4 +10,9 @@ public class CoinTest {
         Coin penny  = Coin.PENNY;
         assertEquals(2.500, penny.weight);
     }
+    @Test
+    public void whenPennyIsSelectedGetPennyDiameter() {
+        Coin penny = Coin.PENNY;
+        assertEquals(0.750, penny.diameter);
+    }
 }
