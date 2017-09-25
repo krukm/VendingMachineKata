@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f26b1970-1b61-4db2-9a71-0eeede2feecf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Models/Coin.java" afterPath="$PROJECT_DIR$/src/Main/Models/Coin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Test/UpdateDisplayTest.java" afterPath="$PROJECT_DIR$/src/Main/Test/UpdateDisplayTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,12 +50,10 @@
       <file leaf-file-name="ProductTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/Test/ProductTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+            <state relative-caret-position="390">
+              <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#296#297#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -479,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506376488154</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add Product enum/ test">
+      <created>1506377204568</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1506377204568</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -510,8 +513,8 @@
     <history-entry file="ProductTest_whenAProductIsSelectedGetThePrice - 2017.09.25 at 18h 06m 08s.xml">
       <configuration name="ProductTest.whenAProductIsSelectedGetThePrice" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="VendingMachineTest_checkForValidCoin - 2017.09.25 at 16h 54m 36s.xml">
-      <configuration name="VendingMachineTest.checkForValidCoin" configurationId="AndroidJUnit" />
+    <history-entry file="ProductTest_whenAProductIsSelectedGetThePrice - 2017.09.25 at 18h 07m 57s.xml">
+      <configuration name="ProductTest.whenAProductIsSelectedGetThePrice" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -559,7 +562,8 @@
     <MESSAGE value="added value to Coin and updated coinTest" />
     <MESSAGE value="added test for coinsAccepted" />
     <MESSAGE value="add/ test updateDisplay, refactor method names" />
-    <option name="LAST_COMMIT_MESSAGE" value="add/ test updateDisplay, refactor method names" />
+    <MESSAGE value="add Product enum/ test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Product enum/ test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -691,12 +695,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Test/ProductTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        <state relative-caret-position="390">
+          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
           </folding>
         </state>
       </provider>
