@@ -15,6 +15,7 @@ class UpdateDisplayTest {
         Coin dime = Coin.DIME;
         Coin quarter = Coin.QUARTER;
 
+        assertEquals("INSERT COIN", vm.updateDisplay());
         vm.coins.add(dime);
         assertEquals(true,String.valueOf(vm.totalOfCoinsAccepted(vm.coins)) == vm.updateDisplay());
         assertEquals("0.10", vm.updateDisplay());
