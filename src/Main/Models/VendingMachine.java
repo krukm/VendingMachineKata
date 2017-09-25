@@ -12,9 +12,18 @@ public class VendingMachine {
     Coin dime = Coin.DIME;
     Coin quarter = Coin.QUARTER;
 
-    String display = "INSERT COIN";
 
-    public double coinsAccepted(ArrayList<Coin> coins) {
+    public String updateDisplay() {
+        String s = "";
+        if (totalOfCoinsAccepted(coins) != 0.0) {
+            s = String.valueOf(totalOfCoinsAccepted(coins));
+        } else {
+            s = "INSERT COIN";
+        }
+        return s;
+    }
+
+    public double totalOfCoinsAccepted(ArrayList<Coin> coins) {
         double total = 0;
         for(Coin change : coins) {
             total = total + change.value;
@@ -29,12 +38,15 @@ public class VendingMachine {
                 return false;
             case NICKEL:
                 coins.add(nickel);
+                updateDisplay();
                 return true;
             case DIME:
                 coins.add(dime);
+                updateDisplay();
                 return true;
             case QUARTER:
                 coins.add(quarter);
+                updateDisplay();
                 return true;
         }
         if (coinAccepted(coin)) return true;
