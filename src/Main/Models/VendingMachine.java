@@ -1,11 +1,13 @@
 package Main.Models;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class VendingMachine {
 
     public ArrayList<Coin> coins = new ArrayList<>();
     public ArrayList<Coin> coinReturn = new ArrayList<>();
+    private DecimalFormat decimalFormat = new DecimalFormat("0.00");
 
     Coin penny = Coin.PENNY;
     Coin nickel = Coin.NICKEL;
@@ -30,14 +32,15 @@ public class VendingMachine {
     }
     public String updateDisplay() {
         String s = "";
-        if (totalOfCoinsAccepted(coins) != 0.0) {
-            s = String.valueOf(totalOfCoinsAccepted(coins));
-        } else if (purchaseComplete) {
+
+        if (purchaseComplete) {
             s = "THANK YOU";
          } else if(needMoreCoins) {
-            s = "PRICE = " + currentProductPrice;
+            s = "PRICE = " + decimalFormat.format(currentProductPrice);
+        } else if (totalOfCoinsAccepted(coins) != 0.0) {
+            s = decimalFormat.format(totalOfCoinsAccepted(coins));
         } else {
-                s = "INSERT COIN";
+            s = "INSERT COIN";
         }
         return s;
     }

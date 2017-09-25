@@ -4,6 +4,7 @@
     <list default="true" id="f26b1970-1b61-4db2-9a71-0eeede2feecf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Models/VendingMachine.java" afterPath="$PROJECT_DIR$/src/Main/Models/VendingMachine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main/Test/UpdateDisplayTest.java" afterPath="$PROJECT_DIR$/src/Main/Test/UpdateDisplayTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,18 +29,32 @@
       <file leaf-file-name="VendingMachine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Models/VendingMachine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="19" column="58" lean-forward="true" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-              <folding />
+            <state relative-caret-position="460">
+              <caret line="38" column="70" lean-forward="false" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MakePurchaseTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UpdateDisplayTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main/Test/UpdateDisplayTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="910">
+              <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MakePurchaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Test/MakePurchaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="278">
+              <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,13 +98,13 @@
         <option value="$PROJECT_DIR$/src/Main/Models/TotalOfCoinsAcceptedTest.java" />
         <option value="$PROJECT_DIR$/src/Main/Test/TotalOfCoinsAcceptedTest.java" />
         <option value="$PROJECT_DIR$/src/Main/Test/VendingMachineTest.java" />
-        <option value="$PROJECT_DIR$/src/Main/Test/UpdateDisplayTest.java" />
         <option value="$PROJECT_DIR$/src/Main/Models/Coin.java" />
         <option value="$PROJECT_DIR$/src/Main/Models/Products.java" />
         <option value="$PROJECT_DIR$/src/Main/Models/Product.java" />
         <option value="$PROJECT_DIR$/src/Main/Test/ProductTest.java" />
-        <option value="$PROJECT_DIR$/src/Main/Models/VendingMachine.java" />
         <option value="$PROJECT_DIR$/src/Main/Test/MakePurchaseTest.java" />
+        <option value="$PROJECT_DIR$/src/Main/Models/VendingMachine.java" />
+        <option value="$PROJECT_DIR$/src/Main/Test/UpdateDisplayTest.java" />
       </list>
     </option>
   </component>
@@ -218,57 +233,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android JUnit.MakePurchaseTest.whenProductIsPurchasedWithExactChangeUpdateArray">
-    <configuration name="CoinAcceptedTest.checkForValidCoin" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Main.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="VendingMachineKata" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Main.Test" />
-      <option name="MAIN_CLASS_NAME" value="Main.Test.CoinAcceptedTest" />
-      <option name="METHOD_NAME" value="checkForValidCoin" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="CoinTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Main.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="VendingMachineKata" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Main.Test" />
-      <option name="MAIN_CLASS_NAME" value="Main.Test.CoinTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
+  <component name="RunManager" selected="Android JUnit.UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate">
     <configuration name="MakePurchaseTest.whenProductIsPurchasedUpdateArrays" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -336,6 +301,31 @@
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Main.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="VendingMachineKata" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Main.Test" />
+      <option name="MAIN_CLASS_NAME" value="Main.Test.UpdateDisplayTest" />
+      <option name="METHOD_NAME" value="whenCoinsAreAddedCheckForDisplayUpdate" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -425,19 +415,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Android JUnit.CoinTest" />
-      <item index="1" class="java.lang.String" itemvalue="Android JUnit.CoinAcceptedTest.checkForValidCoin" />
-      <item index="2" class="java.lang.String" itemvalue="Android JUnit.ProductTest.whenAProductIsSelectedGetThePrice" />
-      <item index="3" class="java.lang.String" itemvalue="Android JUnit.MakePurchaseTest.whenProductIsPurchasedUpdateArrays" />
-      <item index="4" class="java.lang.String" itemvalue="Android JUnit.MakePurchaseTest.whenProductIsPurchasedWithExactChangeUpdateArray" />
+      <item index="0" class="java.lang.String" itemvalue="Android JUnit.ProductTest.whenAProductIsSelectedGetThePrice" />
+      <item index="1" class="java.lang.String" itemvalue="Android JUnit.MakePurchaseTest.whenProductIsPurchasedUpdateArrays" />
+      <item index="2" class="java.lang.String" itemvalue="Android JUnit.MakePurchaseTest.whenProductIsPurchasedWithExactChangeUpdateArray" />
+      <item index="3" class="java.lang.String" itemvalue="Android JUnit.UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Android JUnit.MakePurchaseTest.whenProductIsPurchasedWithExactChangeUpdateArray" />
-        <item index="1" class="java.lang.String" itemvalue="Android JUnit.MakePurchaseTest.whenProductIsPurchasedUpdateArrays" />
-        <item index="2" class="java.lang.String" itemvalue="Android JUnit.ProductTest.whenAProductIsSelectedGetThePrice" />
-        <item index="3" class="java.lang.String" itemvalue="Android JUnit.CoinAcceptedTest.checkForValidCoin" />
-        <item index="4" class="java.lang.String" itemvalue="Android JUnit.CoinTest" />
+        <item index="0" class="java.lang.String" itemvalue="Android JUnit.UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" />
+        <item index="2" class="java.lang.String" itemvalue="Android JUnit.MakePurchaseTest.whenProductIsPurchasedWithExactChangeUpdateArray" />
+        <item index="3" class="java.lang.String" itemvalue="Android JUnit.MakePurchaseTest.whenProductIsPurchasedUpdateArrays" />
+        <item index="4" class="java.lang.String" itemvalue="Android JUnit.ProductTest.whenAProductIsSelectedGetThePrice" />
       </list>
     </recent_temporary>
   </component>
@@ -532,39 +522,46 @@
       <option name="project" value="LOCAL" />
       <updated>1506377305699</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add/ begin test makePurchase">
+      <created>1506379541493</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1506379541494</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CoinAcceptedTest_checkForValidCoin - 2017.09.25 at 17h 53m 46s.xml">
-      <configuration name="CoinAcceptedTest.checkForValidCoin" configurationId="AndroidJUnit" />
+    <history-entry file="UpdateDisplayTest_whenCoinsAreAddedCheckForDisplayUpdate - 2017.09.25 at 19h 06m 54s.xml">
+      <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="CoinAcceptedTest_checkForValidCoin - 2017.09.25 at 17h 56m 28s.xml">
-      <configuration name="CoinAcceptedTest.checkForValidCoin" configurationId="AndroidJUnit" />
+    <history-entry file="UpdateDisplayTest_whenCoinsAreAddedCheckForDisplayUpdate - 2017.09.25 at 19h 10m 56s.xml">
+      <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MakePurchaseTest_whenProductIsPurchasedUpdateArrays - 2017.09.25 at 18h 38m 30s.xml">
-      <configuration name="MakePurchaseTest.whenProductIsPurchasedUpdateArrays" configurationId="AndroidJUnit" />
+    <history-entry file="UpdateDisplayTest_whenCoinsAreAddedCheckForDisplayUpdate - 2017.09.25 at 19h 12m 43s.xml">
+      <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MakePurchaseTest_whenProductIsPurchasedUpdateArrays - 2017.09.25 at 18h 39m 51s.xml">
-      <configuration name="MakePurchaseTest.whenProductIsPurchasedUpdateArrays" configurationId="AndroidJUnit" />
+    <history-entry file="UpdateDisplayTest_whenCoinsAreAddedCheckForDisplayUpdate - 2017.09.25 at 19h 14m 36s.xml">
+      <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MakePurchaseTest_whenProductIsPurchasedUpdateArrays - 2017.09.25 at 18h 40m 26s.xml">
-      <configuration name="MakePurchaseTest.whenProductIsPurchasedUpdateArrays" configurationId="AndroidJUnit" />
+    <history-entry file="UpdateDisplayTest_whenCoinsAreAddedCheckForDisplayUpdate - 2017.09.25 at 19h 17m 29s.xml">
+      <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MakePurchaseTest_whenProductIsPurchasedUpdateArrays - 2017.09.25 at 18h 41m 15s.xml">
-      <configuration name="MakePurchaseTest.whenProductIsPurchasedUpdateArrays" configurationId="AndroidJUnit" />
+    <history-entry file="UpdateDisplayTest_whenCoinsAreAddedCheckForDisplayUpdate - 2017.09.25 at 19h 19m 49s.xml">
+      <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MakePurchaseTest_whenProductIsPurchasedUpdateArrays - 2017.09.25 at 18h 41m 43s.xml">
-      <configuration name="MakePurchaseTest.whenProductIsPurchasedUpdateArrays" configurationId="AndroidJUnit" />
+    <history-entry file="UpdateDisplayTest_whenCoinsAreAddedCheckForDisplayUpdate - 2017.09.25 at 19h 23m 04s.xml">
+      <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="MakePurchaseTest_whenProductIsPurchasedWithExactChangeUpdateArray - 2017.09.25 at 18h 45m 05s.xml">
-      <configuration name="MakePurchaseTest.whenProductIsPurchasedWithExactChangeUpdateArray" configurationId="AndroidJUnit" />
+    <history-entry file="UpdateDisplayTest_whenCoinsAreAddedCheckForDisplayUpdate - 2017.09.25 at 19h 24m 05s.xml">
+      <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="ProductTest_whenAProductIsSelectedGetThePrice - 2017.09.25 at 18h 06m 08s.xml">
-      <configuration name="ProductTest.whenAProductIsSelectedGetThePrice" configurationId="AndroidJUnit" />
+    <history-entry file="UpdateDisplayTest_whenCoinsAreAddedCheckForDisplayUpdate - 2017.09.25 at 19h 25m 04s.xml">
+      <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" configurationId="AndroidJUnit" />
     </history-entry>
-    <history-entry file="ProductTest_whenAProductIsSelectedGetThePrice - 2017.09.25 at 18h 07m 57s.xml">
-      <configuration name="ProductTest.whenAProductIsSelectedGetThePrice" configurationId="AndroidJUnit" />
+    <history-entry file="UpdateDisplayTest_whenCoinsAreAddedCheckForDisplayUpdate - 2017.09.25 at 19h 27m 17s.xml">
+      <configuration name="UpdateDisplayTest.whenCoinsAreAddedCheckForDisplayUpdate" configurationId="AndroidJUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -580,7 +577,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297362" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297362" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -590,7 +587,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39928058" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -614,7 +611,8 @@
     <MESSAGE value="add/ test updateDisplay, refactor method names" />
     <MESSAGE value="add Product enum/ test" />
     <MESSAGE value="add all Products to test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add all Products to test" />
+    <MESSAGE value="add/ begin test makePurchase" />
+    <option name="LAST_COMMIT_MESSAGE" value="add/ begin test makePurchase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -697,24 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Test/UpdateDisplayTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="56" lean-forward="true" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Models/Coin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Test/ProductTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -743,18 +723,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Models/Coin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Models/VendingMachine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="58" lean-forward="true" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="460">
+          <caret line="38" column="70" lean-forward="false" selection-start-line="38" selection-start-column="70" selection-end-line="38" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Test/MakePurchaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        <state relative-caret-position="278">
+          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Test/UpdateDisplayTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="910">
+          <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

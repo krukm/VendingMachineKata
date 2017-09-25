@@ -1,6 +1,7 @@
 package Main.Test;
 
 import Main.Models.Coin;
+import Main.Models.Product;
 import Main.Models.VendingMachine;
 import org.junit.jupiter.api.Test;
 
@@ -15,9 +16,10 @@ class UpdateDisplayTest {
         Coin dime = Coin.DIME;
         Coin quarter = Coin.QUARTER;
 
+        Product cola = Product.COLA;
+
         assertEquals("INSERT COIN", vm.updateDisplay());
         vm.coins.add(dime);
-        assertEquals(true,String.valueOf(vm.totalOfCoinsAccepted(vm.coins)) == vm.updateDisplay());
         assertEquals("0.10", vm.updateDisplay());
 
         vm.coins.add(quarter);
@@ -26,6 +28,12 @@ class UpdateDisplayTest {
         vm.coins.add(nickel);
 
         assertEquals("0.75", vm.updateDisplay());
-        assertEquals(true, String.valueOf(vm.totalOfCoinsAccepted(vm.coins)) == vm.updateDisplay());
+
+        vm.makePurchase(cola);
+        assertEquals("PRICE = 1.00", vm.updateDisplay());
+
+        vm.coins.add(quarter);
+        vm.makePurchase(cola);
+        assertEquals("THANK YOU", vm.updateDisplay());
     }
 }
