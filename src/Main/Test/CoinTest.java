@@ -24,4 +24,11 @@ public class CoinTest {
         assertEquals(0.705, dime.diameter);
         assertEquals(0.955, quarter.diameter);
     }
+    @Test
+    public void whenACoinIsSelectedGetCoinValue() {
+        assertEquals(0.01, penny.value);
+        assertEquals(0.05, nickel.value);
+        assertEquals(0.10, dime.value);
+        assertEquals(0.25, quarter.value);
+    }
 }
