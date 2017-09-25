@@ -1,5 +1,6 @@
-package Main;
+package Main.Test;
 
+import Main.Models.Coin;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
