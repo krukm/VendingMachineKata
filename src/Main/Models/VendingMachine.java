@@ -12,13 +12,32 @@ public class VendingMachine {
     Coin dime = Coin.DIME;
     Coin quarter = Coin.QUARTER;
 
+    Boolean purchaseComplete = false;
+    Boolean needMoreCoins = false;
+    double currentProductPrice = 0.0;
 
+    public void makePurchase(Product product) {
+        if(totalOfCoinsAccepted(coins) == product.price) {
+            coins.clear();
+            purchaseComplete = true;
+        } else if (totalOfCoinsAccepted(coins) > product.price) {
+            double returnChange = product.price - totalOfCoinsAccepted(coins);
+            coins.clear();
+        } else {
+            needMoreCoins = true;
+            currentProductPrice = product.price;
+        }
+    }
     public String updateDisplay() {
         String s = "";
         if (totalOfCoinsAccepted(coins) != 0.0) {
             s = String.valueOf(totalOfCoinsAccepted(coins));
+        } else if (purchaseComplete) {
+            s = "THANK YOU";
+         } else if(needMoreCoins) {
+            s = "PRICE = " + currentProductPrice;
         } else {
-            s = "INSERT COIN";
+                s = "INSERT COIN";
         }
         return s;
     }
