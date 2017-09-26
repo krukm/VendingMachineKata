@@ -41,12 +41,7 @@ public class VendingMachine {
                 coins.clear();
                 inventory.remove(product);
                 for (int i = 0; i < message.length; i++) {
-                    try {
-                        Thread.sleep(5000);
-                        display.setMessage(message[i]);
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
-                    }
+                    display.setMessage(message[i]);
                 }
             } else if (totalCoins(coins) > product.price) {
                 makeChange((int) ((totalCoins(coins) - product.price) * 100));
@@ -54,12 +49,7 @@ public class VendingMachine {
                 inventory.remove(product);
                 coins.clear();
                 for (int i = 0; i < message.length; i++) {
-                    try {
-                        Thread.sleep(5000);
-                        display.setMessage(message[i]);
-                    } catch (InterruptedException e) {
-                        Thread.currentThread().interrupt();
-                    }
+                    display.setMessage(message[i]);
                 }
             } else if (totalCoins(coins) < product.price) {
                 display.setMessage("PRICE = " + decimalFormat.format(product.price));
@@ -136,12 +126,7 @@ public class VendingMachine {
         String message[] = {"OUT OF STOCK", "INSERT COIN"};
         if(!inventory.contains(product)) {
             for (int i = 0; i < message.length; i++) {
-                try {
-                    Thread.sleep(5000);
-                    display.setMessage(message[i]);
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                }
+                display.setMessage(message[i]);
             }
             return true;
         }
