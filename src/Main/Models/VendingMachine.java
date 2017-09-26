@@ -74,4 +74,33 @@ public class VendingMachine {
         if (coinAccepted(coin)) return true;
         else return false;
     }
+    public void makeChange(int change) {
+        int quarters = 0;
+        int dimes = 0;
+        int nickels = 0;
+        int pennies = 0;
+
+        if (change > 0) {
+            quarters = change / 25;
+            dimes = (change % 25) / 10;
+            nickels = ((change % 25) % 10) / 5;
+            pennies = ((change % 25) % 10) % 5;
+        }
+        while(quarters > 0) {
+            coinReturn.add(quarter);
+            quarters --;
+        }
+        while(dimes > 0) {
+            coinReturn.add(dime);
+            dimes --;
+        }
+        while(nickels > 0) {
+            coinReturn.add(nickel);
+            nickels --;
+        }
+        while(pennies > 0) {
+            coinReturn.add(penny);
+            pennies --;
+        }
+    }
 }
