@@ -5,14 +5,24 @@ import java.util.ArrayList;
 
 public class VendingMachine {
 
+    public VendingMachine() {
+        stockInventory();
+        stockCoins();
+    }
+
     public ArrayList<Coin> coins = new ArrayList<>();
     public ArrayList<Coin> coinReturn = new ArrayList<>();
+    public ArrayList<Product> inventory = new ArrayList<>();
+    public ArrayList<Coin> coinReserve = new ArrayList<>();
     private DecimalFormat decimalFormat = new DecimalFormat("0.00");
 
     Coin penny = Coin.PENNY;
     Coin nickel = Coin.NICKEL;
     Coin dime = Coin.DIME;
     Coin quarter = Coin.QUARTER;
+    Product cola = Product.COLA;
+    Product chips = Product.CHIPS;
+    Product candy = Product.CANDY;
 
     Boolean purchaseComplete = false;
     Boolean needMoreCoins = false;
@@ -20,6 +30,9 @@ public class VendingMachine {
 
     public void makePurchase(Product product, ArrayList<Coin> coins) {
         if(totalCoins(coins) == product.price) {
+            for(Coin c : coins) {
+                coinReserve.add(c);
+            }
             coins.clear();
             purchaseComplete = true;
         } else if (totalCoins(coins) > product.price) {
@@ -98,6 +111,21 @@ public class VendingMachine {
         while(nickels > 0) {
             coinReturn.add(nickel);
             nickels --;
+        }
+    }
+
+    private void stockInventory() {
+        for(int i = 0; i < 10; i++) {
+            inventory.add(cola);
+            inventory.add(candy);
+            inventory.add(chips);
+        }
+    }
+    private void stockCoins() {
+        for(int i = 0; i < 10; i++) {
+            coinReserve.add(nickel);
+            coinReserve.add(dime);
+            coinReserve.add(quarter);
         }
     }
 }
