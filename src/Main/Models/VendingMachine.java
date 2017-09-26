@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class VendingMachine {
 
-    Display display = new Display();
+    private Display display = new Display();
 
     public VendingMachine() {
         stockInventory();
@@ -29,24 +29,27 @@ public class VendingMachine {
 
 
     public String getDisplay() {
+        exactChangeNeeded();
         return display.getMessage();
     }
     public void makePurchase(Product product, ArrayList<Coin> coins) {
-        if(totalCoins(coins) == product.price) {
-            for(Coin c : coins) {
-                coinReserve.add(c);
+        if (!outOfStock(product)) {
+            if (totalCoins(coins) == product.price) {
+                for (Coin c : coins) {
+                    coinReserve.add(c);
+                }
+                coins.clear();
+                display.setMessage("THANK YOU");
+            } else if (totalCoins(coins) > product.price) {
+                makeChange((int) ((totalCoins(coins) - product.price) * 100));
+                for (Coin c : coins) {
+                    coinReserve.add(c);
+                }
+                coins.clear();
+                display.setMessage("THANK YOU");
+            } else if (totalCoins(coins) < product.price) {
+                display.setMessage("PRICE = " + decimalFormat.format(product.price));
             }
-            coins.clear();
-            display.setMessage("THANK YOU");
-        } else if (totalCoins(coins) > product.price) {
-            makeChange((int)((totalCoins(coins) - product.price)  * 100));
-            for(Coin c : coins) {
-                coinReserve.add(c);
-            }
-            coins.clear();
-            display.setMessage("THANK YOU");
-        } else if (totalCoins(coins) < product.price) {
-            display.setMessage("PRICE = " + decimalFormat.format(product.price));
         }
     }
 
@@ -106,9 +109,16 @@ public class VendingMachine {
         }
     }
 
-    public Boolean exactChangeNeeded() {
-        if(totalCoins(coinReserve) < 2.00) {
+    public boolean exactChangeNeeded() {
+        if(!coinReserve.contains(quarter) || !coinReserve.contains(dime) || !coinReserve.contains(nickel)) {
             display.setMessage("EXACT CHANGE ONLY");
+            return true;
+        }
+        return false;
+    }
+    public boolean outOfStock(Product product) {
+        if(!inventory.contains(product)) {
+            display.setMessage("SOLD OUT");
             return true;
         }
         return false;
