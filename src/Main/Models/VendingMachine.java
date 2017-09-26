@@ -6,27 +6,24 @@ import java.util.ArrayList;
 public class VendingMachine {
 
     private Display display = new Display();
-
     public VendingMachine() {
         stockInventory();
         stockCoins();
         display.setMessage("INSERT COIN");
     }
-
     public ArrayList<Coin> coins = new ArrayList<>();
     public ArrayList<Coin> coinReturn = new ArrayList<>();
     public ArrayList<Product> inventory = new ArrayList<>();
     public ArrayList<Coin> coinReserve = new ArrayList<>();
     private DecimalFormat decimalFormat = new DecimalFormat("0.00");
 
-    Coin penny = Coin.PENNY;
-    Coin nickel = Coin.NICKEL;
-    Coin dime = Coin.DIME;
-    Coin quarter = Coin.QUARTER;
-    Product cola = Product.COLA;
-    Product chips = Product.CHIPS;
-    Product candy = Product.CANDY;
-
+    private Coin penny = Coin.PENNY;
+    private Coin nickel = Coin.NICKEL;
+    private Coin dime = Coin.DIME;
+    private Coin quarter = Coin.QUARTER;
+    private Product cola = Product.COLA;
+    private Product chips = Product.CHIPS;
+    private Product candy = Product.CANDY;
 
     public String getDisplay() {
         exactChangeNeeded();
@@ -35,16 +32,12 @@ public class VendingMachine {
     public void makePurchase(Product product, ArrayList<Coin> coins) {
         if (!outOfStock(product)) {
             if (totalCoins(coins) == product.price) {
-                for (Coin c : coins) {
-                    coinReserve.add(c);
-                }
+                coinReserve.addAll(coins);
                 coins.clear();
                 display.setMessage("THANK YOU");
             } else if (totalCoins(coins) > product.price) {
                 makeChange((int) ((totalCoins(coins) - product.price) * 100));
-                for (Coin c : coins) {
-                    coinReserve.add(c);
-                }
+                coinReserve.addAll(coins);
                 coins.clear();
                 display.setMessage("THANK YOU");
             } else if (totalCoins(coins) < product.price) {
@@ -52,7 +45,6 @@ public class VendingMachine {
             }
         }
     }
-
     public double totalCoins(ArrayList<Coin> coins) {
         double total = 0;
         for(Coin change : coins) {
@@ -60,7 +52,6 @@ public class VendingMachine {
         }
         return total;
     }
-
     public boolean coinAccepted(Coin coin) {
         switch(coin) {
             case PENNY:
@@ -108,7 +99,10 @@ public class VendingMachine {
             nickels --;
         }
     }
-
+    public void coinReturnActivated() {
+        coinReturn.addAll(coins);
+        coins.clear();
+    }
     public boolean exactChangeNeeded() {
         if(!coinReserve.contains(quarter) || !coinReserve.contains(dime) || !coinReserve.contains(nickel)) {
             display.setMessage("EXACT CHANGE ONLY");
@@ -116,14 +110,13 @@ public class VendingMachine {
         }
         return false;
     }
-    public boolean outOfStock(Product product) {
+    private boolean outOfStock(Product product) {
         if(!inventory.contains(product)) {
             display.setMessage("SOLD OUT");
             return true;
         }
         return false;
     }
-
     private void stockInventory() {
         for(int i = 0; i < 10; i++) {
             inventory.add(cola);
