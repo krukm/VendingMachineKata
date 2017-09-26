@@ -15,5 +15,6 @@ class CoinReturnTest {
         vm.coinAccepted(dime);
         vm.coinReturnActivated();
         assertTrue(vm.coinReturn.contains(dime));
+        assertEquals("INSERT COIN", vm.getDisplay());
     }
 }

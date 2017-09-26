@@ -30,27 +30,44 @@ public class VendingMachine {
         return display.getMessage();
     }
     public void makePurchase(Product product, ArrayList<Coin> coins) {
+        String message[] = {"THANK YOU", "INSERT COIN"};
         if (!outOfStock(product)) {
             if (totalCoins(coins) == product.price) {
                 coinReserve.addAll(coins);
                 coins.clear();
-                display.setMessage("THANK YOU");
+                inventory.remove(product);
+                for (int i = 0; i < message.length; i++) {
+                    try {
+                        Thread.sleep(5000);
+                        display.setMessage(message[i]);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
             } else if (totalCoins(coins) > product.price) {
                 makeChange((int) ((totalCoins(coins) - product.price) * 100));
                 coinReserve.addAll(coins);
+                inventory.remove(product);
                 coins.clear();
-                display.setMessage("THANK YOU");
+                for (int i = 0; i < message.length; i++) {
+                    try {
+                        Thread.sleep(5000);
+                        display.setMessage(message[i]);
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                    }
+                }
             } else if (totalCoins(coins) < product.price) {
                 display.setMessage("PRICE = " + decimalFormat.format(product.price));
             }
         }
     }
     public double totalCoins(ArrayList<Coin> coins) {
-        double total = 0;
+        double total = 0.0;
         for(Coin change : coins) {
             total = total + change.value;
         }
-        return total;
+        return Double.parseDouble(decimalFormat.format(total));
     }
     public boolean coinAccepted(Coin coin) {
         switch(coin) {
@@ -102,6 +119,7 @@ public class VendingMachine {
     public void coinReturnActivated() {
         coinReturn.addAll(coins);
         coins.clear();
+        display.setMessage("INSERT COIN");
     }
     public boolean exactChangeNeeded() {
         if(!coinReserve.contains(quarter) || !coinReserve.contains(dime) || !coinReserve.contains(nickel)) {
@@ -111,8 +129,16 @@ public class VendingMachine {
         return false;
     }
     private boolean outOfStock(Product product) {
+        String message[] = {"OUT OF STOCK", "INSERT COIN"};
         if(!inventory.contains(product)) {
-            display.setMessage("SOLD OUT");
+            for (int i = 0; i < message.length; i++) {
+                try {
+                    Thread.sleep(5000);
+                    display.setMessage(message[i]);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
             return true;
         }
         return false;

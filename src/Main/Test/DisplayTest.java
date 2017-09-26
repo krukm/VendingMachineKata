@@ -15,6 +15,7 @@ class DisplayTest {
     Coin quarter = Coin.QUARTER;
 
     Product cola = Product.COLA;
+
     @Test
     public void whenCoinsAreAddedCheckForDisplayUpdate() {
 
@@ -34,7 +35,7 @@ class DisplayTest {
 
         vm.coinAccepted(quarter);
         vm.makePurchase(cola, vm.coins);
-        assertEquals("THANK YOU", vm.getDisplay());
+        assertEquals("INSERT COIN", vm.getDisplay());
 
         vm.coinReserve.clear();
         assertTrue(vm.exactChangeNeeded());
@@ -47,6 +48,23 @@ class DisplayTest {
             vm.coinAccepted(quarter);
         }
         vm.makePurchase(cola, vm.coins);
-        assertEquals("SOLD OUT", vm.getDisplay());
+        assertEquals("INSERT COIN", vm.getDisplay());
+    }
+    @Test()
+    public void afterPurchaseCompleteOrWhenSoldOutResetDisplay() {
+        while (vm.totalCoins(vm.coins) <= 1.00) {
+            vm.coinAccepted(quarter);
+        }
+        vm.makePurchase(cola, vm.coins);
+        //need a way to test getDisplay() before sleep
+        assertEquals("INSERT COIN", vm.getDisplay());
+
+        vm.inventory.clear();
+        while (vm.totalCoins(vm.coins) <= 1.00) {
+            vm.coinAccepted(quarter);
+        }
+        vm.makePurchase(cola, vm.coins);
+        //need a way to test getDisplay() before sleep
+        assertEquals("INSERT COIN", vm.getDisplay());
     }
 }
