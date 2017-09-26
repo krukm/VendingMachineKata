@@ -5,9 +5,12 @@ import java.util.ArrayList;
 
 public class VendingMachine {
 
+    Display display = new Display();
+
     public VendingMachine() {
         stockInventory();
         stockCoins();
+        display.setMessage("INSERT COIN");
     }
 
     public ArrayList<Coin> coins = new ArrayList<>();
@@ -24,44 +27,27 @@ public class VendingMachine {
     Product chips = Product.CHIPS;
     Product candy = Product.CANDY;
 
-    Boolean purchaseComplete = false;
-    Boolean needMoreCoins = false;
-    double currentProductPrice = 0.0;
 
+    public String getDisplay() {
+        return display.getMessage();
+    }
     public void makePurchase(Product product, ArrayList<Coin> coins) {
         if(totalCoins(coins) == product.price) {
             for(Coin c : coins) {
                 coinReserve.add(c);
             }
             coins.clear();
-            purchaseComplete = true;
+            display.setMessage("THANK YOU");
         } else if (totalCoins(coins) > product.price) {
             makeChange((int)((totalCoins(coins) - product.price)  * 100));
             for(Coin c : coins) {
                 coinReserve.add(c);
             }
             coins.clear();
-            purchaseComplete = true;
+            display.setMessage("THANK YOU");
         } else if (totalCoins(coins) < product.price) {
-            needMoreCoins = true;
-            currentProductPrice = product.price;
+            display.setMessage("PRICE = " + decimalFormat.format(product.price));
         }
-    }
-    public String updateDisplay() {
-        String s = "";
-
-        if (purchaseComplete) {
-            s = "THANK YOU";
-            needMoreCoins = false;
-            currentProductPrice = 0.0;
-         } else if(needMoreCoins) {
-            s = "PRICE = " + decimalFormat.format(currentProductPrice);
-        } else if (totalCoins(coins) != 0.0) {
-            s = decimalFormat.format(totalCoins(coins));
-        } else {
-            s = "INSERT COIN";
-        }
-        return s;
     }
 
     public double totalCoins(ArrayList<Coin> coins) {
@@ -79,15 +65,15 @@ public class VendingMachine {
                 return false;
             case NICKEL:
                 coins.add(nickel);
-                updateDisplay();
+                display.setMessage(decimalFormat.format(totalCoins(coins)));
                 return true;
             case DIME:
                 coins.add(dime);
-                updateDisplay();
+                display.setMessage(decimalFormat.format(totalCoins(coins)));
                 return true;
             case QUARTER:
                 coins.add(quarter);
-                updateDisplay();
+                display.setMessage(decimalFormat.format(totalCoins(coins)));
                 return true;
         }
         if (coinAccepted(coin)) return true;
@@ -118,6 +104,14 @@ public class VendingMachine {
             coinReserve.remove(nickel);
             nickels --;
         }
+    }
+
+    public Boolean exactChangeNeeded() {
+        if(totalCoins(coinReserve) < 2.00) {
+            display.setMessage("EXACT CHANGE ONLY");
+            return true;
+        }
+        return false;
     }
 
     private void stockInventory() {

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UpdateDisplayTest {
+class DisplayTest {
     @Test
     public void whenCoinsAreAddedCheckForDisplayUpdate() {
         VendingMachine vm = new VendingMachine();
@@ -18,22 +18,22 @@ class UpdateDisplayTest {
 
         Product cola = Product.COLA;
 
-        assertEquals("INSERT COIN", vm.updateDisplay());
-        vm.coins.add(dime);
-        assertEquals("0.10", vm.updateDisplay());
+        assertEquals("INSERT COIN", vm.getDisplay());
+        vm.coinAccepted(dime);
+        assertEquals("0.10", vm.getDisplay());
 
-        vm.coins.add(quarter);
-        vm.coins.add(quarter);
-        vm.coins.add(dime);
-        vm.coins.add(nickel);
+        vm.coinAccepted(quarter);
+        vm.coinAccepted(quarter);
+        vm.coinAccepted(dime);
+        vm.coinAccepted(nickel);
 
-        assertEquals("0.75", vm.updateDisplay());
+        assertEquals("0.75", vm.getDisplay());
 
         vm.makePurchase(cola, vm.coins);
-        assertEquals("PRICE = 1.00", vm.updateDisplay());
+        assertEquals("PRICE = 1.00", vm.getDisplay());
 
-        vm.coins.add(quarter);
+        vm.coinAccepted(quarter);
         vm.makePurchase(cola, vm.coins);
-        assertEquals("THANK YOU", vm.updateDisplay());
+        assertEquals("THANK YOU", vm.getDisplay());
     }
 }
