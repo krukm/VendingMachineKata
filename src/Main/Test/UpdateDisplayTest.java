@@ -29,11 +29,11 @@ class UpdateDisplayTest {
 
         assertEquals("0.75", vm.updateDisplay());
 
-        vm.makePurchase(cola);
+        vm.makePurchase(cola, vm.coins);
         assertEquals("PRICE = 1.00", vm.updateDisplay());
 
         vm.coins.add(quarter);
-        vm.makePurchase(cola);
+        vm.makePurchase(cola, vm.coins);
         assertEquals("THANK YOU", vm.updateDisplay());
     }
 }

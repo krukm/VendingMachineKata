@@ -16,10 +16,10 @@ class TotalOfCoinsAcceptedTest {
         Coin quarter = Coin.QUARTER;
 
         vm.coins.add(nickel);
-        assertEquals(0.05, vm.totalOfCoinsAccepted(vm.coins));
+        assertEquals(0.05, vm.totalCoins(vm.coins));
         vm.coins.add(dime);
-        assertEquals(0.15, vm.totalOfCoinsAccepted(vm.coins));
+        assertEquals(0.15, vm.totalCoins(vm.coins));
         vm.coins.add(quarter);
-        assertEquals(0.40, vm.totalOfCoinsAccepted(vm.coins));
+        assertEquals(0.40, vm.totalCoins(vm.coins));
     }
 }

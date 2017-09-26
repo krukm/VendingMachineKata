@@ -18,14 +18,15 @@ public class VendingMachine {
     Boolean needMoreCoins = false;
     double currentProductPrice = 0.0;
 
-    public void makePurchase(Product product) {
-        if(totalOfCoinsAccepted(coins) == product.price) {
+    public void makePurchase(Product product, ArrayList<Coin> coins) {
+        if(totalCoins(coins) == product.price) {
             coins.clear();
             purchaseComplete = true;
-        } else if (totalOfCoinsAccepted(coins) > product.price) {
-            double returnChange = product.price - totalOfCoinsAccepted(coins);
+        } else if (totalCoins(coins) > product.price) {
+            makeChange((int)((totalCoins(coins) - product.price)  * 100));
             coins.clear();
-        } else {
+            purchaseComplete = true;
+        } else if (totalCoins(coins) < product.price) {
             needMoreCoins = true;
             currentProductPrice = product.price;
         }
@@ -35,17 +36,19 @@ public class VendingMachine {
 
         if (purchaseComplete) {
             s = "THANK YOU";
+            needMoreCoins = false;
+            currentProductPrice = 0.0;
          } else if(needMoreCoins) {
             s = "PRICE = " + decimalFormat.format(currentProductPrice);
-        } else if (totalOfCoinsAccepted(coins) != 0.0) {
-            s = decimalFormat.format(totalOfCoinsAccepted(coins));
+        } else if (totalCoins(coins) != 0.0) {
+            s = decimalFormat.format(totalCoins(coins));
         } else {
             s = "INSERT COIN";
         }
         return s;
     }
 
-    public double totalOfCoinsAccepted(ArrayList<Coin> coins) {
+    public double totalCoins(ArrayList<Coin> coins) {
         double total = 0;
         for(Coin change : coins) {
             total = total + change.value;
@@ -78,13 +81,11 @@ public class VendingMachine {
         int quarters = 0;
         int dimes = 0;
         int nickels = 0;
-        int pennies = 0;
 
         if (change > 0) {
             quarters = change / 25;
             dimes = (change % 25) / 10;
             nickels = ((change % 25) % 10) / 5;
-            pennies = ((change % 25) % 10) % 5;
         }
         while(quarters > 0) {
             coinReturn.add(quarter);
@@ -97,10 +98,6 @@ public class VendingMachine {
         while(nickels > 0) {
             coinReturn.add(nickel);
             nickels --;
-        }
-        while(pennies > 0) {
-            coinReturn.add(penny);
-            pennies --;
         }
     }
 }
