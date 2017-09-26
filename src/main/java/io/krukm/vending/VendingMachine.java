@@ -1,7 +1,11 @@
-package Main.Models;
+package io.krukm.vending;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+
+import io.krukm.vending.model.Coin;
+import io.krukm.vending.model.Display;
+import io.krukm.vending.model.Product;
 
 public class VendingMachine {
 

@@ -1,6 +1,6 @@
-package Main.Test;
+package io.krukm.vending;
 
-import Main.Models.Coin;
+import io.krukm.vending.model.Coin;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

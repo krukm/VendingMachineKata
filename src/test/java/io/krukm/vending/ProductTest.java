@@ -1,6 +1,6 @@
-package Main.Test;
+package io.krukm.vending;
 
-import Main.Models.Product;
+import io.krukm.vending.model.Product;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

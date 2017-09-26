@@ -1,8 +1,8 @@
-package Main.Test;
+package io.krukm.vending;
 
-import Main.Models.Coin;
-import Main.Models.Product;
-import Main.Models.VendingMachine;
+import io.krukm.vending.model.Coin;
+import io.krukm.vending.model.Product;
+import io.krukm.vending.VendingMachine;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,4 +1,4 @@
-package Main.Models;
+package io.krukm.vending.model;
 
 public enum Product {
     COLA(1.00), CHIPS(0.50), CANDY(0.65);

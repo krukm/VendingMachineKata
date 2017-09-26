@@ -1,4 +1,4 @@
-package Main.Models;
+package io.krukm.vending.model;
 
 public class Display {
     public String getMessage() {
