@@ -37,6 +37,9 @@ public class VendingMachine {
             purchaseComplete = true;
         } else if (totalCoins(coins) > product.price) {
             makeChange((int)((totalCoins(coins) - product.price)  * 100));
+            for(Coin c : coins) {
+                coinReserve.add(c);
+            }
             coins.clear();
             purchaseComplete = true;
         } else if (totalCoins(coins) < product.price) {
@@ -102,14 +105,17 @@ public class VendingMachine {
         }
         while(quarters > 0) {
             coinReturn.add(quarter);
+            coinReserve.remove(quarter);
             quarters --;
         }
         while(dimes > 0) {
             coinReturn.add(dime);
+            coinReserve.remove(dime);
             dimes --;
         }
         while(nickels > 0) {
             coinReturn.add(nickel);
+            coinReserve.remove(nickel);
             nickels --;
         }
     }
@@ -123,9 +129,9 @@ public class VendingMachine {
     }
     private void stockCoins() {
         for(int i = 0; i < 10; i++) {
-            coinReserve.add(nickel);
-            coinReserve.add(dime);
             coinReserve.add(quarter);
+            coinReserve.add(dime);
+            coinReserve.add(nickel);
         }
     }
 }
